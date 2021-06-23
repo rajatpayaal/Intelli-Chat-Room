@@ -13,7 +13,24 @@ const server = http.createServer((req,res)=>{
 
 // res.setHeader('contect-type','text/plan');
 res.setHeader('contect-type','text/html');
-fs.readFile('./view/index.html',(err,data)=>{
+
+let route="./view/";
+switch (req.url) {
+  case '/':
+    route += 'index.html'
+    break;
+  case '/contact':
+  route += 'contact.html'
+    break;
+
+ default:
+    route +='404.html'
+    break;
+}
+
+
+
+fs.readFile(route ,(err,data)=>{
   if(err){ //if else loop 
     console.log(err);
     res.end();
