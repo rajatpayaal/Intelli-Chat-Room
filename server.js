@@ -2,8 +2,11 @@ const http = require('http');
 //last check -
 //const hostname = 'localhost';
 const fs = require('fs');
+const moment = require('moment');
 const hostname = 'localhost';
 const port = 3000;
+const bday = '2021-12-25';
+console.log(moment(bday).format('LLLL'))
 const server = http.createServer((req,res)=>{
    
 
@@ -17,14 +20,27 @@ res.setHeader('contect-type','text/html');
 let route="./view/";
 switch (req.url) {
   case '/':
+   // without moment #npm console.log(date);
+    console.log("hii");
+  
     route += 'index.html'
+    res.statusCode= 200;
     break;
+
   case '/contact':
   route += 'contact.html'
+  res.statusCode= 200;
     break;
+
+    case '/contact-us':
+      res.statusCode= 301
+      res.setHeader('location','/contact');
+      res.end();
+        break;
 
  default:
     route +='404.html'
+    res.statusCode= 404;
     break;
 }
 
