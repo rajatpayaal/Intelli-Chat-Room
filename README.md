@@ -11,6 +11,7 @@ Server errors (500–599)  "internal server error"
  run server :- nodemon server 
  install nodemon:-
 npm install -g nodemon
+
 //       www.npm.com
   for package.json  local npm:- npm init 
 
@@ -20,6 +21,14 @@ npm install -g nodemon
   // hint :- const bday = '2021-12-25';
 console.log(moment(bday).format('LLLL'))
  refrance :- https://momentjs.com/docs/
+..........................................7/5/2021/.............
+* goto to for css :-  https://materializecss.com/navbar
+<meta name="viewport"Content="width=device-width,  inital-scale=1.0">
+        // this is added on index file <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+         and nevbar content inside body view/index.html
+
+
+
   
 
 
