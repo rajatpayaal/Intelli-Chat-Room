@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-    <title>Document</title>
-</head>
-
-<body>
-    <nav>
-        <div class="nav-wrapper container">
-            <a href="/" class="brand-logo">CRUD </a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="./add-item">Add Item</a></li>
-
-            </ul>
-        </div>
-    </nav>
-    <div class="container">
-        <ul class="collection with-header">
-
-            <% if (items.length>0) { %>
-
-            <%  items.forEach(item => { %>
-            <li class="collection-item">
-                <div><%= item.name%> $<%= item.price%><a href="#!" class="secondary-content"><i
-                            class="material-icons">delete</i><i class="material-icons">edit</i></a></div>
-            </li>
-            <%  }); %>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"Content="width=device-width,  inital-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <title>
+            data document
+        </title>
+        <body>
+            <nav>
+                <div class="nav-wrapper container">
+                  <a href="Hellotegra at Taplinkd.jpg" class="brand-logo">CodeXwolf</a>
+                  <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    
+<!-- const express = require('express');
+  const app = express();
+app.listen(3000);
 
 
-            <% }else{%>
-            <li>There are no items</li>
-            <%}%>
-         
-        </ul>
-    </div>
+app.get('/', (req, res) => {
+   
+    res.sendFile('./view/index.html', {root:__dirname});
+})
+app.get('/add', (req, res) => {
+    res.sendFile('./view/add.html',{root:__dirname});
+}) -->
 
 
-</body>
-
+                    <li><a href="./add"> ADD </a></li>
+                  
+                  </ul>
+                </div>
+                </nav>
+                <div class="container">
+                  <ul class="collection with-header">
+                    <li class="collection-header"><h4>First Names</h4></li>
+                    <li class="collection-item"><div>rony<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+                    <li class="collection-item"><div>ron<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+                    <li class="collection-item"><div>ruhi<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+                    <li class="collection-item"><div>Ruplai<a href="#!" class="secondary-content"><i class="material-icons">send</i></a></div></li>
+                  </ul>
+                </div>
+        </body>
+    </head>
 </html>

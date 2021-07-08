@@ -35,8 +35,8 @@ command :-
 * pm install ejs
 * npm install materialize-css@next :- for materilize 
 
-in express js :- 
-* <!-- const express = require('express');
+in express js :- read add.html comment 
+<!-- const express = require('express');
 const app = express();
 app.listen(3000);
 
@@ -50,14 +50,14 @@ app.get('/add', (req, res) => {
 }) -->
 
  * for container <div class="container"> </div>
- * icon chages:-
- * <!-- <i class="material-icons prefix">account_circle</i> 
+ * icon chages:- read add.html comment
+  <!-- <i class="material-icons prefix">account_circle</i> 
          <i class="large material-icons">insert_chart // "icon name" </i>
         "https://materializecss.com/icons.html"
      icon size :-  material-icons prefix  
- * for large :- large material-icons Small , Medium ,Large -->
+     * for large :- large material-icons Small , Medium ,Large -->
 
-
+* convert all .html to .ejs #goto app.js file 
 
 
   
