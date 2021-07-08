@@ -50,6 +50,13 @@ app.get('/add', (req, res) => {
 }) -->
 
  * for container <div class="container"> </div>
+ * icon chages:-
+  <!-- <i class="material-icons prefix">account_circle</i> 
+         <i class="large material-icons">insert_chart // "icon name" </i>
+        "https://materializecss.com/icons.html"
+     icon size :-  material-icons prefix  
+     * for large :- large material-icons Small , Medium ,Large -->
+
 
 
 
