@@ -57,7 +57,7 @@ app.get('/add', (req, res) => {
      icon size :-  material-icons prefix  
      * for large :- large material-icons Small , Medium ,Large -->
 
-* convert all .html to .ejs #goto app.js file 
+* convert all .html to .ejs #goto app.js file.
 
 
   
