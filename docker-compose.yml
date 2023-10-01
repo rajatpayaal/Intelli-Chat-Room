@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  client:
+    build: ./client
+    container_name: clientapp_c
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/app
+      - ./app/node_modules
+    stdin_open: true
+    tty: true
+
+  server:
+    build: ./server
+    container_name: serverapp_c
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./server:/app
+      - ./app/node_modules
