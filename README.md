@@ -22,7 +22,7 @@
 - Fork the Repository
 - Clone the Repository in your system using following command -
 ```
-git clone https://github.com/Your_User_Name/Aarav238.git
+git clone https://github.com/rajatpayaal/
 ```
 - Then go to public directory using this command-
 ```
