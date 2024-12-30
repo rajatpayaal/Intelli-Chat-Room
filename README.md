@@ -1,6 +1,6 @@
 
 # Project Title
-[BUZZ CHAT](https://buzz-chat-app.netlify.app) is the chat app in which you can chat with any User who is registered in the User's Database.
+[Intelli Chat](https://buzz-chat-app.netlify.app) is the chat app in which you can chat with any User who is registered in the User's Database.
 # Screenshorts
 
 <p>
