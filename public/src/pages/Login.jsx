@@ -2,13 +2,18 @@ import React,{useState,useEffect} from 'react'
 import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../assets/chat.png"
+import { LuLoader2 } from "react-icons/lu";
 import {ToastContainer, toast} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { loginRoute } from '../utils/APIRoutes';
 
+
+
+
 function Login() {
     const navigate = useNavigate()
+    const [loading , setLoading] = useState(false);
     const [values , setValues] = useState({
         username:"",
        password:"",
@@ -29,6 +34,7 @@ function Login() {
     const handleSubmit = async (event)=> {
         event.preventDefault();
         if(handleValidation()){
+            setLoading(true)
             const{password, username}= values;
             const{data} = await axios.post(loginRoute,{
                 username,
@@ -36,9 +42,11 @@ function Login() {
             });
             if(data.status === false){
                toast.error(data.msg,toastOptions) 
+               setLoading(false)
             }
             if(data.status === true){
                 localStorage.setItem('chat-app-user',JSON.stringify(data.user));
+                setLoading(false)
                 navigate("/");
             }
           
@@ -68,6 +76,9 @@ function Login() {
   <>
   <FormContainer>
      <form onSubmit={(event)=> handleSubmit(event)}>
+     <div><h4> Demo : user id = rajat123
+      <br></br><h4>password : rajat123</h4>
+     </h4></div>
         <div className="brand">
             <img src={Logo} alt="Logo" />
             {/* <h1>Buzz</h1> */}
@@ -92,7 +103,8 @@ function Login() {
 
           
          
-         <button type="submit">Login </button>
+                  <button type="submit">{loading ? <LuLoader2 className='loader'/> : "LOGIN"}</button>
+         
          <span>Don't have an account ? <Link to="/register">Register</Link></span>
      </form>
   </FormContainer>
@@ -109,7 +121,7 @@ flex-direction : column;
 justify-content : center;
 gap : 1rem;
 align-items : center;
-background-color: #131324;
+background-color: gray;
 .brand{
     display: flex;
     align-items : center;
@@ -129,15 +141,27 @@ background-color: #131324;
         text-transform: uppercase;
     } */
 }
+.loader {
+    animation: spin 1s linear infinite;
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+}
 form{
     display: flex;
     flex-direction: column;
     gap: 2rem;     
-    background-color: #00000076;
+    background-color: white;
     border-radius: 2rem;
     padding: 3rem 5rem;
     input{
-        background-color: transparent;
+        background-color: #131324;
         padding: 1rem;
         border: 0.1rem solid #4e0eff;
         border-radius: 0.4rem;

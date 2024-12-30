@@ -3,12 +3,14 @@ import styled from "styled-components";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../assets/chat.png"
 import {ToastContainer, toast} from "react-toastify";
+import { LuLoader2 } from "react-icons/lu";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { registerRoute } from '../utils/APIRoutes';
 
 function Register() {
     const navigate = useNavigate()
+    const [loading , setLoading] = useState(false);
     const [values , setValues] = useState({
         username:"",
         email:"",
@@ -35,16 +37,19 @@ function Register() {
     const handleSubmit = async (event)=> {
         event.preventDefault();
         if(handleValidation()){
+            setLoading(true)
             const{password, username, email}= values;
             const{data} = await axios.post(registerRoute,{username,
                 email,
                 password,
             });
             if(data.status === false){
+               setLoading(false)
                toast.error(data.msg,toastOptions) 
             }
             if(data.status === true){
                 localStorage.setItem('chat-app-user',JSON.stringify(data.user));
+                setLoading(false)
                 navigate("/");
             }
           
@@ -117,7 +122,7 @@ function Register() {
          onChange={(e) =>handleChange(e)} 
          />
          
-         <button type="submit">Create User</button>
+         <button type="submit">{loading ?<LuLoader2 className='loader'/>  :"Create User"}</button>
          <span>Already have an account ? <Link to="/login">Login</Link></span>
      </form>
   </FormContainer>
@@ -150,6 +155,18 @@ background-color: #131324;
         color: white;
         text-transform: uppercase;
     }
+}
+.loader {
+    animation: spin 1s linear infinite;
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 }
 form{
     display: flex;

@@ -4,9 +4,7 @@
 # Screenshorts
 
 <p>
- <img align="center" width="900" height="400" src="https://imgur.com/aUIV5la.jpg">
-<img align="center"  width="900" height="400" src="https://imgur.com/rSwshhZ.jpg">
-<img align="center"  width="900" height="400" src="https://imgur.com/OQZyOId.jpg">
+
 
 </p>
 

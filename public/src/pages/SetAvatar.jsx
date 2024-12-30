@@ -7,11 +7,13 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 import { setAvatarRoute } from "../utils/APIRoutes";
+import { LuLoader2 } from "react-icons/lu";
 export default function SetAvatar() {
   const api = `https://api.multiavatar.com/4645646`;
   const navigate = useNavigate();
   const [avatars, setAvatars] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const[loading, setLoading] = useState(false);
   const [selectedAvatar, setSelectedAvatar] = useState(undefined);
   const toastOptions = {
     position: "bottom-right",
@@ -31,8 +33,10 @@ export default function SetAvatar() {
 
   const setProfilePicture = async () => {
     if (selectedAvatar === undefined) {
+      setLoading(false)
       toast.error("Please select an avatar", toastOptions);
     } else {
+      setLoading(true)
       const user = await JSON.parse(
         localStorage.getItem("chat-app-user")
       );
@@ -48,8 +52,10 @@ export default function SetAvatar() {
             "chat-app-user",
           JSON.stringify(user)
         );
+        setLoading(false)
         navigate("/");
       } else {
+        setLoading(false)
         toast.error("Error setting avatar. Please try again.Double Click on button ", toastOptions);
       }
     }
@@ -106,7 +112,7 @@ export default function SetAvatar() {
             })}
           </div>
           <button onClick={setProfilePicture} className="submit-btn">
-            Set as Profile Picture
+           {loading ? <LuLoader2 className="loader-icon"/> :  "Set as Profile Picture"}
           </button>
         </Container>
       )}
@@ -128,6 +134,20 @@ const Container = styled.div`
   .loader {
     max-inline-size: 100%;
   }
+
+  
+  .loader-icon {
+    animation: spin 1s linear infinite;
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+}
 
   .title-container {
     h1 {
