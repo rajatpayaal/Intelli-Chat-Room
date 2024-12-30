@@ -13,13 +13,6 @@
 
 
 
-## Technologies Used: 
-
- - [MongoDB](https://www.mongodb.com/docs)
- - [ExpressJS](https://expressjs.com)
- - [ReactJS](https://reactjs.org/docs/getting-started.html)
- - [NodeJS](https://nodejs.org/en/docs/)
- - [Socket.io](https://socket.io/docs/v4/)
 
 
 
