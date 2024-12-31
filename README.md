@@ -1,9 +1,38 @@
 
 # Project Title
-[Intelli Chat](https://buzz-chat-app.netlify.app) is the chat app in which you can chat with any User who is registered in the User's Database.
+[Intelli Chat](https://buzz-chat-app.netlify.app) A chat room is a web site and part of an online service that provides a venue for communities of users with a common interest to communicate in real time.
 # Screenshorts
 
 <p>
+# Demo Application
+
+This repository contains a real-time communication application that enables user registration, secure login, and live chat functionality.
+
+## Features
+1. **User Registration**  
+   Users can register a new account via an intuitive interface.  
+   ![Register](https://imgur.com/YwcBW9z)
+
+2. **User Login**  
+   Log in to access chat rooms and communicate live.  
+   Demo Login Credentials:  
+   - **Username:** rajat123  
+   - **Password:** rajat123  
+   ![Login](https://imgur.com/Q6YbKNy)
+
+3. **Chat Room Selection**  
+   Choose from multiple chat rooms for group communication.  
+   ![Chat Room](https://imgur.com/AEKxyFW)
+
+4. **Live Chat**  
+   Engage in real-time messaging with other users.  
+   ![Live Chat](https://imgur.com/1vCEHij)
+
+## Usage
+1. Clone the repository.  
+2. Install the dependencies:  
+   ```bash
+   npm install
 
 
 </p>
