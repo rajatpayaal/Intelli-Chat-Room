@@ -11,22 +11,22 @@ Log in to access chat rooms and communicate live. Use the demo credentials to ex
 - **Username:** rajat123
 - **Password:** rajat123
 
-![Login](https://i.imgur.com/Q6YbKNy.png)
+![Login](https://github.com/rajatpayaal/Intelli-Chat-Room/blob/0bcd5416d522217132bc876e6254ef39c9774d30/1.JPG)
 
 ### 📂 Chat Room Selection
 Select from multiple chat rooms to connect with users sharing similar interests.
 
-![Chat Room](https://i.imgur.com/AEKxyFW.png)
+![Chat Room](https://github.com/rajatpayaal/Intelli-Chat-Room/blob/0bcd5416d522217132bc876e6254ef39c9774d30/2.JPG)
 
 ### 📝 User Registration
 Easily register for a new account using a simple and secure interface.
 
-![Register](https://i.imgur.com/YwcBW9z.png)
+![Register](https://github.com/rajatpayaal/Intelli-Chat-Room/blob/0bcd5416d522217132bc876e6254ef39c9774d30/11.JPG)
 
 ### 💬 Live Chat
 Experience real-time messaging with a clean and efficient user interface.
 
-![Live Chat](https://i.imgur.com/1vCEHij.png)
+![Live Chat](https://github.com/rajatpayaal/Intelli-Chat-Room/blob/0bcd5416d522217132bc876e6254ef39c9774d30/3.JPG)
 
 ---
 
